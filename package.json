@@ -1,0 +1,22 @@
+{
+  "name": "main",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "axios": "^0.16.1",
+    "babel-runtime": "^6.20.0",
+    "lodash": "^4.17.4",
+    "meteor-node-stubs": "~0.2.4",
+    "react": "~15.4.2",
+    "react-dom": "~15.4.2",
+    "react-google-maps": "^6.3.0",
+    "react-icons": "^2.2.3",
+    "react-komposer": "^1.13.1",
+    "react-router-dom": "~4.0.0",
+    "react-table": "^5.6.0",
+    "shortid": "^2.2.8",
+    "simpl-schema": "^0.3.0"
+  }
+}
