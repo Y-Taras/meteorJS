@@ -61,8 +61,11 @@ class Landing extends Component {
     var styles = { textDecoration: 'underline' }
     return (
       <div>
-        <button className='myButton' onClick={this.onLogout}>LogOut</button>
-        <div style={styles}>{Meteor.user().profile.name}</div>
+        <div className='wrapper'>
+          <button className='myButton' onClick={this.onLogout}>LogOut</button>
+          <div style={styles}>{Meteor.user().profile.name}</div>
+        </div>
+
         <PrevQueries />
         <form onSubmit={this.handleSubmit}>
           <input

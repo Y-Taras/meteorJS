@@ -18,8 +18,12 @@ class Login extends Component {
   }
   render () {
     return (
-      <div>
-        <button className='myButton' onClick={this.clickHandle}>Sign in with Google</button>
+      <div className='loginForm'>
+        <p>To search venues using Foursquare API, please sign in:</p>
+        <button className='myButton' onClick={this.clickHandle}>
+          <img src='google-icon.png' alt='google-icon' />
+          <span>&nbsp;Google&nbsp; </span>
+        </button>
       </div>
     )
   }

@@ -2,7 +2,41 @@
 
 body {
     color: #555555;
+    background: #f2f2f2;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.loginForm {
+    font-family: 'Source Sans Pro';
+    font-size: 1.3em;
+    position: absolute;
+    width: 200px;
+    height: 220px;
+    background: #eee;
+    top: 50%;
+    left: 50%;
+    margin: -110px 0 0 -100px;
+    padding: 20px;
+    border: 1px solid gray;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+    button>img,
+    button>span {
+        vertical-align: middle;
+    }
 }
 
 table.queries {
@@ -12,21 +46,20 @@ table.queries {
     width: 100%;
     th,
     td {
-        padding: 15px;
         a.removeButton {
             display: inline-block;
             cursor: pointer;
             width: 2rem;
             height: 2rem;
             background-color: white;
-            background-image: url('remove-icon.png'); //background-position: 10px 10px;
-            background-repeat: no-repeat;
+            background: url('remove-icon.png') no-repeat center center;
         }
     }
     &th,
     td {
         border: 1px solid #ddd;
-        text-align: left;
+        text-align: center;
+        padding: 2px 4px;
     }
 }
 
