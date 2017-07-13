@@ -1,7 +1,7 @@
-import React, { PropTypes } from 'react'
-import { withGoogleMap, GoogleMap, Marker } from 'react-google-maps'
-import withScriptjs from 'react-google-maps/lib/async/withScriptjs'
-import MarkerClusterer from 'react-google-maps/lib/addons/MarkerClusterer'
+import React, { PropTypes } from "react";
+import { withGoogleMap, GoogleMap, Marker } from "react-google-maps";
+import withScriptjs from "react-google-maps/lib/async/withScriptjs";
+import MarkerClusterer from "react-google-maps/lib/addons/MarkerClusterer";
 
 const Map = withScriptjs(
   withGoogleMap(props => (
@@ -20,11 +20,11 @@ const Map = withScriptjs(
       </MarkerClusterer>
     </GoogleMap>
   ))
-)
+);
 
 Map.propTypes = {
   markers: PropTypes.arrayOf(PropTypes.object),
   onMapClick: PropTypes.func
-}
+};
 
-export default Map
+export default Map;

@@ -1,15 +1,14 @@
-import React, { Component } from 'react'
-import { _ } from 'lodash'
-import FaSpinner from 'react-icons/lib/fa/spinner'
+import React, { Component } from "react";
+import { _ } from "lodash";
+import { Meteor } from "meteor/meteor";
+import { Accounts } from "meteor/accounts-base";
 
-import { Meteor } from 'meteor/meteor'
-import { Accounts } from 'meteor/accounts-base'
-
-import PrevQueries from './PrevQueries.js'
-import Map from './Map.js'
-import CsvExport from './CSV.js'
-import SearchResult from './SearchResult.js'
-import fetchFourSquareApi from '../utils/api.js'
+import PrevQueries from "./PrevQueries.js";
+import Map from "./Map.js";
+import CsvExport from "./CSV.js";
+import SearchResult from "./SearchResult.js";
+import fetchFourSquareApi from "../utils/api.js";
+import loadingElement from "./loadingElement.js";
 
 class Landing extends Component {
   constructor () {
@@ -78,19 +77,7 @@ class Landing extends Component {
           />
         </form>
         <Map
-          loadingElement={
-            <div style={{ height: `200px` }}>
-              <FaSpinner
-                style={{
-                  display: `block`,
-                  width: `80px`,
-                  height: `80px`,
-                  margin: `150px auto`,
-                  animation: `fa-spin 2s infinite linear`
-                }}
-              />
-            </div>
-          }
+          loadingElement={loadingElement()}
           googleMapURL='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyByH0c5bxYDZ48BLQ401BBsm4DppG6QNkQ'
           containerElement={<div style={{ height: `354px` }} />}
           mapElement={<div style={{ height: `350px` }} />}

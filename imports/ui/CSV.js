@@ -2,17 +2,22 @@ import React, { PropTypes } from 'react'
 
 const CsvExport = props => {
   const data = props.venue
-  const csvContent = data.reduce((previous, current) => {
-    return (
-      previous +
-      `${current.name},${current.location.city},${current.location.address},${current.location.lat},${current.location.lng}\n`
-    )
-  }, 'data:text/csv;charset=utf-8,')
+  const csvContent =
+    'data:text/csv;charset=utf-8,' +
+    data
+      .map(elem => {
+        return `${elem.name},${elem.location.city},${elem.location.address},${elem.location.lat},${elem.location.lng}`
+      })
+      .join('\n')
   var encodedUri = encodeURI(csvContent)
 
   return (
     <div>
-      <a className='myButton' download='venues.csv' onClick={() => window.open(encodedUri)}>
+      <a
+        className='myButton'
+        download='venues.csv'
+        onClick={() => window.open(encodedUri)}
+      >
         Export CSV
       </a>
     </div>

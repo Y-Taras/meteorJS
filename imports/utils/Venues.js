@@ -29,7 +29,7 @@ Meteor.methods({
       lat,
       lng,
       userId: Meteor.userId(),
-      date: new Date(Date.now()).toLocaleString()
+      date: new Date()
     })
   },
   'querylist.remove' (id) {
